@@ -1,0 +1,34 @@
+<h2>Ajouter Atelier</h2>
+
+<form [formGroup]="atelierForm" (ngSubmit)="onSubmit()">
+
+  <input type="text" formControlName="nom" placeholder="Nom">
+  <div *ngIf="nom?.touched && nom?.invalid">
+    <p *ngIf="nom?.errors?.['required']">Nom obligatoire</p>
+    <p *ngIf="nom?.errors?.['minlength']">Minimum 5 caractères</p>
+  </div>
+  <br>
+
+  <input type="email" formControlName="emailFormateur" placeholder="Email formateur">
+  <div *ngIf="emailFormateur?.touched && emailFormateur?.invalid">
+    <p *ngIf="emailFormateur?.errors?.['required']">Email obligatoire</p>
+    <p *ngIf="emailFormateur?.errors?.['email']">Format email invalide</p>
+  </div>
+  <br>
+
+  <input type="number" formControlName="nbrParticipant" placeholder="Nombre participants">
+  <div *ngIf="nbrParticipant?.touched && nbrParticipant?.invalid">
+    <p *ngIf="nbrParticipant?.errors?.['required']">Champ obligatoire</p>
+    <p *ngIf="nbrParticipant?.errors?.['min']">Doit être supérieur à 15</p>
+  </div>
+  <br>
+
+  <label>
+    Statut
+    <input type="checkbox" formControlName="statut">
+  </label>
+  <br><br>
+
+  <button type="submit" [disabled]="atelierForm.invalid">Ajouter</button>
+
+</form>

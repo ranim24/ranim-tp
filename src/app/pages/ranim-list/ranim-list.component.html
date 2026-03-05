@@ -1,0 +1,36 @@
+<h2>Liste des Ateliers</h2>
+
+<button (click)="router.navigate(['/add'])">Ajouter un atelier</button>
+<br><br>
+
+<div *ngIf="loading">Chargement en cours...</div>
+
+<div *ngIf="!loading && ateliers.length === 0">
+  Aucun atelier trouvé.
+</div>
+
+<table *ngIf="!loading && ateliers.length > 0" border="1" cellpadding="5">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Email Formateur</th>
+      <th>Nombre Participants</th>
+      <th>Statut</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let atelier of ateliers">
+      <td>{{atelier.id}}</td>
+      <td>{{atelier.nom}}</td>
+      <td>{{atelier.emailformateur}}</td>
+      <td>{{atelier.nbrparticipant}}</td>
+      <td>{{atelier.statut ? 'Actif' : 'Inactif'}}</td>
+      <td>
+        <button (click)="editAtelier(atelier.id)">Modifier</button>
+        <button (click)="deleteAtelier(atelier.id)">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

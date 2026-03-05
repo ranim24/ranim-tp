@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RanimListComponent } from './ranim-list.component';
+import { azzaAddComponent } from './azza-add.component';
 
-describe('RanimListComponent', () => {
-  let component: RanimListComponent;
-  let fixture: ComponentFixture<RanimListComponent>;
+describe('azzaAddComponent', () => {
+  let component: azzaAddComponent;
+  let fixture: ComponentFixture<azzaAddComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [RanimListComponent]
+      declarations: [azzaAddComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RanimListComponent);
+    fixture = TestBed.createComponent(azzaAddComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

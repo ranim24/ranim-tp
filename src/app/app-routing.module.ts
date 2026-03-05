@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RanimAddComponent } from './pages/ranim-add/ranim-add.component';
-import { RanimEditComponent } from './pages/ranim-edit/ranim-edit.component';
-import { RanimListComponent } from './pages/ranim-list/ranim-list.component';
+import { azzaAddComponent } from './pages/azza-add/azza-add.component';
+import { azzaEditComponent } from './pages/azza-edit/azza-edit.component';
+import { AzzaListComponent } from './pages/azza-list/azza-list.component.';
 
 const routes: Routes = [
- { path: 'add', component: RanimAddComponent },
-  { path: 'edit/:id', component: RanimEditComponent },
-  { path: 'list', component: RanimListComponent },
+ { path: 'add', component: azzaAddComponent },
+  { path: 'edit/:id', component: azzaEditComponent },
+  { path: 'list', component: AzzaListComponent },
   { path: '', redirectTo: 'list', pathMatch: 'full' }
 ];
 

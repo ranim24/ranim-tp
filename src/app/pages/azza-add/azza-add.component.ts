@@ -4,10 +4,10 @@ import { AtelierService } from '../../services/atelier.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-ranim-add',
-  templateUrl: './ranim-add.component.html'
+  selector: 'app-azza-add',
+  templateUrl: './azza-add.component.html'
 })
-export class RanimAddComponent implements OnInit {
+export class azzaAddComponent implements OnInit {
 
   atelierForm!: FormGroup;
 

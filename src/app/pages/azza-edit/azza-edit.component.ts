@@ -5,10 +5,10 @@ import { AtelierService } from '../../services/atelier.service';
 import { Atelier } from '../../atelier.model';
 
 @Component({
-  selector: 'app-ranim-edit',
-  templateUrl: './ranim-edit.component.html'
+  selector: 'app-azza-edit',
+  templateUrl: './azza-edit.component.html'
 })
-export class RanimEditComponent {
+export class azzaEditComponent {
 
   atelierForm!: FormGroup;
   id!: string;
